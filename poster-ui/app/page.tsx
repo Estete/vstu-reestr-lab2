@@ -192,7 +192,11 @@ export default function Home() {
         transactionHash: event.transactionHash
       }));
 
-      postsData.sort((a: any, b: any) => b.blockNumber - a.blockNumber);
+      postsData.sort((a: any, b: any) => {
+        if (b.blockNumber > a.blockNumber) return 1;
+        if (b.blockNumber < a.blockNumber) return -1;
+        return 0;
+      });
 
       setPosts(postsData);
       setFilteredPosts(postsData);
