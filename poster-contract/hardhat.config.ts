@@ -22,7 +22,7 @@ export default defineConfig({  plugins: [hardhatToolboxViemPlugin],
 
   verify: {
     etherscan: {
-      apiKey: "I89IYQ7GUU7NMDN1MIAAK78TWSW3FIKFRH",
+      apiKey: "API KEY",
     },
   },
 
