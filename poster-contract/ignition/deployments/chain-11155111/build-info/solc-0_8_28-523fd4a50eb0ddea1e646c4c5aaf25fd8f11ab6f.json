@@ -1,0 +1,39 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_28-523fd4a50eb0ddea1e646c4c5aaf25fd8f11ab6f",
+  "solcVersion": "0.8.28",
+  "solcLongVersion": "0.8.28+commit.7893614a",
+  "userSourceNameMap": {
+    "contracts/Poster.sol": "project/contracts/Poster.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "cancun",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/Poster.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <0.9.0;\n\ncontract Poster {\n    event NewPost(address indexed user, string content, string indexed tag);\n\n    function post(string memory content, string memory tag) public\n{\n       emit NewPost(msg.sender, content, tag);\n    }\n}\n"
+      }
+    }
+  }
+}
